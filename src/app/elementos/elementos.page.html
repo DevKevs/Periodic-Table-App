@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Elementos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <h2 style="text-align: center;"><b>Tabla Periodica!</b></h2>
+   <ion-item *ngFor="let i of elemen.elements" (click)="modal(i)">
+     <ion-avatar [ngStyle]="{'background-color':'#'+i.color2}"><h5 style="text-align: center; margin-top: 10px; color:black;"><b>{{i.symbol}}</b></h5></ion-avatar>
+      <h4 style="padding-left: 10px;">{{i.name}}</h4>
+      <ion-badge slot="end" color="secondary">{{i.number}}</ion-badge>
+   </ion-item>
+  </ion-list>
+</ion-content>

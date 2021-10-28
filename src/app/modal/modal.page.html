@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-sharp"(click)="dismiss()" style="width: 30px; height: 30px;"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{element.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-avatar id="avatar" [ngStyle]="{'background-color':'#'+element.color2}"><h1 id="letter"><b>{{element.symbol}}</b></h1></ion-avatar>
+      <ion-card-title style="text-align: center; font-size: 25px;"><b>{{element.name}}</b></ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="font-size: 16px;">
+      {{element.summary}}
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <h6>Apariencia: <b>{{element.appearance}}</b></h6>
+    </ion-item>
+    <ion-item>
+      <ion-label>Masa atomica:</ion-label>
+      <ion-badge slot="end" color="success">{{element.atomic_mass}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoria:</ion-label>
+      {{element.category}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Densidad:</ion-label>
+      <ion-badge slot="end" color="success">{{element.density}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descubrido por:</ion-label>
+      {{element.discovered_by}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombrada por:</ion-label>
+      {{element.named_by}}
+    </ion-item>
+    <ion-item>
+      <ion-label>Fase:</ion-label>
+      {{element.phase}}
+    </ion-item>
+    <ion-item>
+      <ion-label>configuración electronica:</ion-label>
+      <ion-badge slot="end" color="success">{{element.electron_configuration}}</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>
